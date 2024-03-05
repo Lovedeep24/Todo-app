@@ -7,7 +7,7 @@ export default function Todo({id,title,status,dispatch}) {
       <p>title: {title}</p>
       <p>status: {status? "true" : "false"}</p>
       <button onClick={()=>dispatch({type:"DELETE",payload:{id:id}})}>Delete</button>
-      <button>Toggle</button>
+      <button onClick={()=>dispatch({type:"TOGGLE",payload:{id:id}})}>Toggle</button>
     </div>
   );
 }
